@@ -42,7 +42,7 @@ class TestSkillsPracticeStrings(unittest.TestCase): #change class name
 if __name__ == '__main__': 
 
     loader = unittest.TestLoader()
-    suite = loader.loadTestsFromTestCase(Testskillspracticestrings) #change input paramenter
+    suite = loader.loadTestsFromTestCase(TestSkillsPracticeStrings) #change input paramenter
     runner = unittest.TextTestRunner(stream=sys.stderr)
     result = runner.run(suite)
 

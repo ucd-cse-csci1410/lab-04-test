@@ -76,7 +76,7 @@ if __name__ == '__main__': # run this if its being run directly ie the main or e
     # Returns a new instance of TestLoader.
     # Assignment to loader.
 
-    suite = loader.loadTestsFromTestCase(Testskillspracticenumbers)
+    suite = loader.loadTestsFromTestCase(TestSkillsPracticeNumbers)
     # loader is now a TestLoader object (an instance of the TestLoader class).
     # It has methods you can call, like:
     # loadTestsFromTestCase()

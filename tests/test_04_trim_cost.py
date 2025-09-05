@@ -27,7 +27,7 @@ class TestTrimCost(unittest.TestCase): #change class name
     
         trim_cost() #changed function call
         output = self.original_stdout.getvalue().strip() 
-        expected_output = "Perimeter of the box = 30.0\nNumber of trims you need to buy = 3\nTotal cost of the trims = 5.64\nThe amount of trims lost = 0.5\nThe cost lost by wasting the trim = 0.94\n" # change this
+        expected_output = "Perimeter of the box = 30.0\nNumber of trims you need to buy = 3\nTotal cost of the trims = 5.64\nThe amount of trims lost = 0.5\nThe cost lost by wasting the trim = 0.94" # change this
 
         self.assertEqual(
             output,

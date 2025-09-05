@@ -35,18 +35,6 @@ class TestTrimCost(unittest.TestCase): #change class name
             msg=f"\n❌ Wrong output.\n Please Check the calculation and the format of the display'"
         )
     
-    # @patch('builtins.input', side_effect =['10.8', '55.8'])  # Mock user input
-    # def tests_trim_cost(self,mock_input): #change name
-
-    #     trim_cost() #changed function call
-    #     output = self.original_stdout.getvalue().strip() 
-    #     expected_output = "Perimeter of the box = 133.2\nNumber of trims you need to buy = 12\nTotal cost of the trims = 22.56\nThe amount of trims lost = 0.9000000000000004\nThe cost lost by wasting the trim = 1.6920000000000006\n" # change this
-
-    #     self.assertEqual(
-    #         output,
-    #         expected_output,
-    #         msg=f"\n❌ Wrong output.\n Please Check the calculation and the format of the display'"
-    #     )
 
 
 if __name__ == '__main__': 

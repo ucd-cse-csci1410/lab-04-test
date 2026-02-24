@@ -4,9 +4,9 @@ from unittest.mock import patch
 from io import StringIO
 
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from main import skills_practice_math_ciel #import correct function
+from src.main import skills_practice_math_ciel #import correct function
 
 
 
@@ -37,14 +37,12 @@ class TestSkillsPracticeMathCiel(unittest.TestCase): #change class name
         )
 
 
-if __name__ == '__main__': 
-
+if __name__ == '__main__':
     loader = unittest.TestLoader()
-    suite = loader.loadTestsFromTestCase(TestSkillsPracticeMathCiel) #change input paramenter
+    suite = unittest.TestSuite()
+    suite.addTests(loader.loadTestsFromTestCase(TestSkillsPracticeMathCiel))
     runner = unittest.TextTestRunner(stream=sys.stderr)
     result = runner.run(suite)
-
-
     if result.wasSuccessful():
         print("Test passed")
     else:

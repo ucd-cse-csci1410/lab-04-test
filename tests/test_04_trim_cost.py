@@ -4,9 +4,9 @@ from unittest.mock import patch
 from io import StringIO
 
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from main import trim_cost #import correct function
+from src.main import trim_cost #import correct function
 
 
 
@@ -27,24 +27,20 @@ class TestTrimCost(unittest.TestCase): #change class name
     
         trim_cost() #changed function call
         output = self.original_stdout.getvalue().strip() 
-        expected_output = "Perimeter of the box = 30.0\nNumber of trims you need to buy = 3\nTotal cost of the trims = 5.64\nThe amount of trims lost = 0.5\nThe cost lost by wasting the trim = 0.94" # change this
+        expected_output = "Perimeter of the box = 30.0\nNumber of trims you need to buy = 3\nTotal cost of the trims = 5.64\nThe amount of trims lost = 0.5\nThe cost lost by wasting the strp = 0.94" # change this
 
         self.assertEqual(
             output,
             expected_output,
             msg=f"\n❌ Wrong output.\n Please Check the calculation and the format of the display'"
         )
-    
 
-
-if __name__ == '__main__': 
-
+if __name__ == '__main__':
     loader = unittest.TestLoader()
-    suite = loader.loadTestsFromTestCase(TestTrimCost) #change input paramenter
+    suite = unittest.TestSuite()
+    suite.addTests(loader.loadTestsFromTestCase(TestTrimCost))
     runner = unittest.TextTestRunner(stream=sys.stderr)
     result = runner.run(suite)
-
-
     if result.wasSuccessful():
         print("Test passed")
     else:

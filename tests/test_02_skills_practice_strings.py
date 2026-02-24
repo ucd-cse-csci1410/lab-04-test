@@ -1,16 +1,14 @@
 import unittest 
-
 from unittest.mock import patch
 from io import StringIO
-
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from main import skills_practice_strings #import correct function
+from src.main import skills_practice_strings #import correct function
 
 
 
-class TestSkillsPracticeStrings(unittest.TestCase): #change class name
+class TestSkillsPracticeStrings(unittest.TestCase): 
     
     
     def setUp(self):
@@ -52,3 +50,7 @@ if __name__ == '__main__':
     else:
         print("Test failed")
         sys.exit(1)
+
+
+
+

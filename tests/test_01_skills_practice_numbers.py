@@ -8,9 +8,8 @@ from unittest.mock import patch
 
 from io import StringIO
 
-
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 #print("__file__ =", __file__)        # path of this file (1411/Assignment-Manager/assignment-manager/Lab-02-VScode_and_Github/Lab-02-Solution/Lab-02-test/tests/test_01_print_hello.py)
 #os.path.dirname(__file__).  removes last file or folder and returns the path (1411/Assignment-Manager/assignment-manager/Lab-02-VScode_and_Github/Lab-02-Solution/Lab-02-test/tests)
 #os.path.join    joins the given two paths. ie (1411/Assignment-Manager/assignment-manager/Lab-02-VScode_and_Github/Lab-02-Solution/Lab-02-test/tests/../../src)
@@ -18,7 +17,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../.
 #sys.path.insert(0,path). asks python to first check this before checking any other packages or modules)
 
 
-from main import skills_practice_numbers # gets skills_practice_numbers from .../Lab-02-VScode_and_Github/Lab-02-Solution/src
+from src.main import skills_practice_numbers # gets skills_practice_numbers from .../Lab-02-VScode_and_Github/Lab-02-Solution/src
 
 
 
@@ -105,3 +104,5 @@ if __name__ == '__main__': # run this if its being run directly ie the main or e
     else:
         print("Test failed")
         sys.exit(1)            # Non-zero exit code signals failure
+
+

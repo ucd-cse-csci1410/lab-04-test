@@ -1,4 +1,5 @@
 import unittest 
+import math
 
 from unittest.mock import patch
 from io import StringIO
@@ -37,12 +38,13 @@ class TestSkillsPracticeMathCiel(unittest.TestCase): #change class name
         )
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
+
     loader = unittest.TestLoader()
-    suite = unittest.TestSuite()
-    suite.addTests(loader.loadTestsFromTestCase(TestSkillsPracticeMathCiel))
+    suite = loader.loadTestsFromTestCase(TestSkillsPracticeMathCiel) #change input paramenter
     runner = unittest.TextTestRunner(stream=sys.stderr)
     result = runner.run(suite)
+
     if result.wasSuccessful():
         print("Test passed")
     else:

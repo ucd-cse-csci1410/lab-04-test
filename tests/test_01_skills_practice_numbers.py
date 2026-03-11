@@ -9,7 +9,7 @@ from unittest.mock import patch
 from io import StringIO
 
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 #print("__file__ =", __file__)        # path of this file (1411/Assignment-Manager/assignment-manager/Lab-02-VScode_and_Github/Lab-02-Solution/Lab-02-test/tests/test_01_print_hello.py)
 #os.path.dirname(__file__).  removes last file or folder and returns the path (1411/Assignment-Manager/assignment-manager/Lab-02-VScode_and_Github/Lab-02-Solution/Lab-02-test/tests)
 #os.path.join    joins the given two paths. ie (1411/Assignment-Manager/assignment-manager/Lab-02-VScode_and_Github/Lab-02-Solution/Lab-02-test/tests/../../src)

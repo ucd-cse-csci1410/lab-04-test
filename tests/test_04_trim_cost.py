@@ -35,12 +35,13 @@ class TestTrimCost(unittest.TestCase): #change class name
             msg=f"\n❌ Wrong output.\n Please Check the calculation and the format of the display'"
         )
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
+
     loader = unittest.TestLoader()
-    suite = unittest.TestSuite()
-    suite.addTests(loader.loadTestsFromTestCase(TestTrimCost))
+    suite = loader.loadTestsFromTestCase(TestTrimCost) #change input paramenter
     runner = unittest.TextTestRunner(stream=sys.stderr)
     result = runner.run(suite)
+
     if result.wasSuccessful():
         print("Test passed")
     else:
